@@ -1,0 +1,107 @@
+body {
+	background-color: #1a2034;
+	font-size: 10px;
+}
+
+/*Left-menu*/
+#left-menu {
+	background-color: #2b3245;
+}
+
+#left-menu div{
+	color: #ce642a;
+	text-align: center;
+}
+
+#left-menu li.active-menu{
+	background-color: #812f9f;
+	border-radius: 3px;
+}
+
+#left-menu a{
+	color: #808080;
+	text-decoration: none;
+}
+
+/*Content*/
+#page-content > div:first-child {
+	height: 50vh;
+	background-image: url("../media/admin-page-background.jpg"); 
+	background-size: cover;
+	color: #808080;
+}
+
+#page-content div:first-child a{
+	color: #808080;
+	text-decoration: none;
+}
+
+#page-content > div:nth-child(2) {
+	height: 50vh;
+	color: white;
+}
+
+#body-content {
+	overflow: auto;
+}
+
+#content-table {
+	background-color: #2b3245;
+	border-radius: 5px;
+}
+
+#content-table thead tr:first-child{
+	background-color: #812f9f;
+}
+
+@media only screen and (min-width: 576px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+/*Noti snackbar*/
+#snackbar {
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #333;
+  color: #fff; 
+  text-align: center;
+  border-radius: 2px; 
+  padding: 16px; 
+  position: fixed; 
+  z-index: 1; 
+  left: 50%; 
+  bottom: 30px; 
+}
+
+/* Show the snackbar when load page */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
